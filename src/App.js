@@ -18,7 +18,7 @@ function App() {
     <div className="App">
       <Switch>
         <Suspense fallback={<div>Yükleniyor...</div>}>
-          <Route path="/shop" component={Header} />
+          <Route path="/" component={Header} />
         </Suspense>
       </Switch>
     </div>
