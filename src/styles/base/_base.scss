@@ -1,0 +1,20 @@
+/// base
+
+@use '../abstracts/' as *;
+
+*, // minimal normalize
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// global parent font size (10px == 1rem)
+html {
+  font-size: 62.5%;
+}
+
+img {
+  max-width: 100%;
+}

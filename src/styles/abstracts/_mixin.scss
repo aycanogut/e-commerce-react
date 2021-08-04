@@ -1,0 +1,69 @@
+/// mixin
+
+@use 'breakpoints' as *;
+
+// media quaries
+@mixin mq($args) {
+  $size: map-get($breakpoints, $args);
+
+  @media only screen and (min-width: $size) {
+    @content;
+  }
+}
+
+// container
+@mixin make-container($padding-x: $container-padding-x) {
+  width: 100%;
+  padding-right: $padding-x;
+  padding-left: $padding-x;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// grid
+@mixin grid($cols, $marg) {
+  margin: 0 $marg $marg 0;
+  width: ( (100% - (($cols - 1) * $marg )) / $cols );
+
+  &:nth-child(#{$cols}n){
+      margin-right: 0;
+  }
+}
+
+//  position with pseudo classes
+@mixin pseudo(
+  $loc: before,
+  $content: "",
+  $pos: absolute,
+  $top: 0,
+  $bottom: 0,
+  $left: 0,
+  $right: 0
+) {
+  position: relative;
+
+  &::#{$loc} {
+    content: $content;
+    position: $pos;
+    top: $top;
+    bottom: $bottom;
+    left: $left;
+    right: $right;
+    @content;
+  }
+}
+
+// transition
+@mixin transition($args) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+// box-shadow
+@mixin box-shadow($args) {
+  -webkit-box-shadow: $args;
+  -moz-box-shadow: $args;
+  box-shadow: $args;
+}
