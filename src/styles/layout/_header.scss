@@ -2,3 +2,73 @@
 
 @use '../abstracts/' as *;
 
+.header {
+  position: relative;
+  background-color: $color-pink;
+  width: 100%;
+  padding: 0 0 3rem 0;
+
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+
+    // small breakpoint
+    @include mq(small) {
+      right: 0;
+      margin: 0 0 0 6rem;
+    }
+  }
+
+  &__title {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    margin: 9rem 15rem 0 2rem;
+
+    // small breakpoint
+    @include mq(small) {
+      margin: 20rem 35rem 0 2rem;
+    }
+
+    // medium breakpoint
+    @include mq(medium) {
+      margin: 25rem 50rem 0 5rem;
+    }
+
+    &__h1 {
+      color: $color-white;
+    }
+
+    &__button {
+      margin: 7rem 0 0 1.4rem;
+
+      a {
+        display: block;
+        border: none;
+        text-align: center;
+        white-space: nowrap;
+        text-decoration: none;
+        background-color: $color-white;
+        color: $color-dark-gray;
+        padding: 1.4rem 3.6rem;
+
+        // large breakpoint
+        @include mq(large) {
+          padding: 2rem 5rem;
+        }
+      }
+    }
+  }
+
+  // small breakpoint
+  @include mq(small) {
+    padding: 0 0 5rem 0;
+  }
+
+  // medium breakpoint
+  @include mq(medium) {
+    padding: 0 0 10rem 0;
+  }
+}

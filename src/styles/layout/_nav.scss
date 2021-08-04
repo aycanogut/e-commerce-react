@@ -2,3 +2,33 @@
 
 @use '../abstracts/' as *;
 
+.nav {
+  display: flex;
+  padding: 1.2rem;
+
+  &__brand {
+    z-index: 1;
+    margin: 0.3rem 0 0 0;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 auto;
+
+    &__item {
+      display: flex;
+      width: 2.8rem;
+      height: 2.8rem;
+    }
+
+    &__item:nth-last-child(1) {
+      margin: 0 0 0.5rem 2rem;
+    }
+  }
+
+  &__list--hidden {
+    display: none;
+    background-color: $color-white;
+  }
+}
