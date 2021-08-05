@@ -3,6 +3,7 @@
 @use '../abstracts/' as *;
 
 .nav {
+  position: relative;
   display: flex;
   padding: 1.2rem;
 
@@ -27,8 +28,90 @@
     }
   }
 
+  // hidden nav bar
   &__list--hidden {
-    display: none;
+    position: absolute;
+    inset: 0;
+    z-index: 9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    padding: 2rem 0;
     background-color: $color-white;
+
+    &-item {
+      padding: 3rem 0;
+    }
+
+    // change order of elements (put close X to up)
+    &-item:last-child {
+      order: 1;
+      margin: 0 1rem 0 auto;
+      padding: 0;
+    }
+
+    &-item:first-child {
+      order: 2;
+    }
+
+    &-item:nth-child(2) {
+      order: 3;
+    }
+
+    &-item:nth-child(3) {
+      order: 4;
+    }
+
+    &-item:nth-child(4) {
+      order: 5;
+    }
+
+    &-item:nth-child(5) {
+      order: 6;
+    }
+
+    // colors
+    &-item:nth-child(-n + 3) a {
+      color: $color-blue;
+    }
+
+    &-item a {
+      color: $color-dark-gray;
+    }
+
+    // large breakpoint
+    @include mq(large) {
+      flex-direction: row;
+      height: 18.7rem;
+      padding: 0 7rem;
+
+      // nav items spacing
+      &-item {
+        margin: 0 5rem;
+      }
+
+      &-item:first-child {
+        margin: 0;
+      }
+
+      &-item:nth-child(4) {
+        margin: 0 0 0 auto;
+      }
+
+      &-item:last-child {
+        margin: 0;
+      }
+    }
+  }
+
+  // nav helper classes for hamburger action
+  &__show {
+    @include transition(0.8s);
+    left: 0;
+  }
+
+  &__hide {
+    display: none;
   }
 }
