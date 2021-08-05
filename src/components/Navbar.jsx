@@ -17,7 +17,7 @@ const Navbar = () => {
           <img src={IconBasket} alt="" />
         </li>
       </ul>
-      <ul className="nav__list--hidden">
+      <ul className="nav__list--hidden nav__hide">
         <li className="nav__list--hidden-item">
           <Link to="/shop">shop</Link>
         </li>
