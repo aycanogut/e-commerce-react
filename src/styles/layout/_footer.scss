@@ -2,3 +2,87 @@
 
 @use '../abstracts/' as *;
 
+.footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 2rem 1rem 2rem 2rem;
+  background-color: $color-pink;
+
+  &__column {
+    margin: 0 auto;
+    padding: 0 1rem;
+
+    // medium breakpoint
+    @include mq(medium) {
+      display: flex;
+      flex-direction: row;
+      margin: 0;
+    }
+  }
+
+  &__flex {
+    margin: 0 2rem;
+  }
+
+  &__title {
+    color: $color-white;
+  }
+
+  &__icons {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5rem 0;
+  }
+
+  &__links {
+    display: flex;
+    text-align: left;
+
+    // medium breakpoint
+    @include mq(medium) {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    &__header {
+      color: $color-white;
+    }
+
+    &__list {
+      padding: 1.8rem 0;
+
+      &__item {
+        padding: 1rem 0;
+
+        a {
+          color: $color-dark-gray;
+        }
+      }
+    }
+  }
+
+  &__last {
+    margin: 4rem 0 0 0;
+
+    // medium breakpoint
+    @include mq(medium) {
+      margin: 0;
+    }
+
+    // large breakpoint
+    @include mq(large) {
+      margin: 0;
+    }
+
+    // x-large breakpoint
+    @include mq(x-large) {
+      margin: 0;
+    }
+  }
+
+  // medium breakpoint
+  @include mq(medium) {
+    flex-direction: row;
+  }
+}
