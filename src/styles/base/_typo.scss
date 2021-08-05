@@ -7,6 +7,16 @@ h1 {
   font-family: $font-family-abril;
   font-size: 5rem;
   text-transform: capitalize;
+
+  // medium breakpoint
+  @include mq(medium) {
+    font-size: 7rem;
+  }
+
+  // large breakpoint
+  @include mq(large) {
+    font-size: 8rem;
+  }
 }
 
 a {
@@ -47,5 +57,19 @@ p {
       font-size: 1.6rem;
       text-transform: capitalize;
     }
+  }
+}
+
+// footer
+.footer {
+  font-family: $font-family-lato;
+
+  &__title {
+    font-size: 3rem;
+  }
+
+  &__links {
+    font-size: 1.6rem;
+    text-transform: capitalize;
   }
 }
