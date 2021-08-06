@@ -6,12 +6,12 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 2rem 1rem 2rem 2rem;
+  margin: 10rem 0 0 0;
+  padding: 6rem 1rem 6rem 2rem;
   background-color: $color-pink;
 
   &__column {
     margin: 0 auto;
-    padding: 0 1rem;
 
     // medium breakpoint
     @include mq(medium) {
@@ -19,31 +19,64 @@
       flex-direction: row;
       margin: 0;
     }
+
+    // large breakpoint
+    @include mq(large) {
+      padding: 0 2rem;
+    }
   }
 
   &__flex {
     margin: 0 2rem;
+
+    // medium breakpoint
+    @include mq(medium) {
+      margin: 0 3rem;
+    }
   }
 
   &__title {
     color: $color-white;
+
+    // medium breakpoint
+    @include mq(medium) {
+      text-align: left;
+      padding: 0 3rem 0 0;
+    }
+
+    // large breakpoint
+    @include mq(large) {
+      padding: 0 14rem 0 0;
+    }
   }
 
   &__icons {
     display: flex;
     justify-content: space-evenly;
     padding: 5rem 0;
+
+    &__item {
+      // medium breakpoint
+      @include mq(medium) {
+        padding: 0 0.4rem;
+      }
+
+      // large breakpoint
+      @include mq(large) {
+        padding: 0 1rem;
+      }
+    }
+
+    // medium breakpoint
+    @include mq(medium) {
+      justify-content: flex-start;
+    }
   }
 
   &__links {
     display: flex;
     text-align: left;
-
-    // medium breakpoint
-    @include mq(medium) {
-      flex-direction: row;
-      justify-content: center;
-    }
+    white-space: nowrap;
 
     &__header {
       color: $color-white;
@@ -59,6 +92,12 @@
           color: $color-dark-gray;
         }
       }
+    }
+
+    // medium breakpoint
+    @include mq(medium) {
+      flex-direction: row;
+      justify-content: center;
     }
   }
 
@@ -84,5 +123,12 @@
   // medium breakpoint
   @include mq(medium) {
     flex-direction: row;
+    padding: 7em 3rem;
+  }
+
+  // large breakpoint
+  @include mq(large) {
+    justify-content: space-around;
+    padding: 9rem 4rem 6rem 4rem;
   }
 }
