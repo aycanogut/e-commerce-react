@@ -11,24 +11,8 @@
   &__background {
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     z-index: 0;
-
-    // small breakpoint
-    @include mq(small) {
-      right: 0;
-      // margin: 0 0 0 6rem;
-    }
-
-    // medium breakpoint
-    @include mq(medium) {
-      // margin: 0 0 0 20rem;
-    }
-
-    // large breakpoint
-    @include mq(large) {
-      margin: 0 0 0 39rem;
-    }
   }
 
   &__title {
