@@ -11,22 +11,22 @@ const Footer = () => {
           <h2 className="footer__title">Need help with anything?</h2>
           <ul className="footer__icons">
             <li className="footer__icons__item">
-              <a href="#">
+              <a href="/#">
                 <img className="footer__icons__item__icon" src={IconFacebook} alt="" />
               </a>
             </li>
             <li className="footer__icons__item">
-              <a href="#">
+              <a href="/#">
                 <img className="footer__icons__item__icon" src={IconInstagram} alt="" />
               </a>
             </li>
             <li className="footer__icons__item">
-              <a href="#">
+              <a href="/#">
                 <img className="footer__icons__item__icon" src={IconTwitter} alt="" />
               </a>
             </li>
             <li className="footer__icons__item">
-              <a href="#">
+              <a href="/#">
                 <img className="footer__icons__item__icon" src={IconYoutube} alt="" />
               </a>
             </li>
@@ -38,16 +38,16 @@ const Footer = () => {
               <header className="footer__links__header">home</header>
               <ul className="footer__links__list">
                 <li className="footer__links__list__item">
-                  <a href="#">what is it</a>
+                  <a href="/#">what is it</a>
                 </li>
                 <li className="footer__links__list__item">
-                  <a href="#">how its works</a>
+                  <a href="/#">how its works</a>
                 </li>
                 <li className="footer__links__list__item">
-                  <a href="#">it's important</a>
+                  <a href="/#">it's important</a>
                 </li>
                 <li className="footer__links__list__item">
-                  <a href="#">pricing</a>
+                  <a href="/#">pricing</a>
                 </li>
               </ul>
             </div>
@@ -55,13 +55,13 @@ const Footer = () => {
               <header className="footer__links__header">company</header>
               <ul className="footer__links__list">
                 <li className="footer__links__list__item">
-                  <a href="#">about</a>
+                  <a href="/#">about</a>
                 </li>
                 <li className="footer__links__list__item">
-                  <a href="#">blog</a>
+                  <a href="/#">blog</a>
                 </li>
                 <li className="footer__links__list__item">
-                  <a href="#">careers</a>
+                  <a href="/#">careers</a>
                 </li>
               </ul>
             </div>
@@ -71,13 +71,13 @@ const Footer = () => {
               <header className="footer__links__header">legal</header>
               <ul className="footer__links__list">
                 <li className="footer__links__list__item">
-                  <a href="#">terms & conditions</a>
+                  <a href="/#">terms & conditions</a>
                 </li>
                 <li className="footer__links__list__item">
-                  <a href="#">privacy & policy </a>
+                  <a href="/#">privacy & policy </a>
                 </li>
                 <li className="footer__links__list__item">
-                  <a href="#">contact</a>
+                  <a href="/#">contact</a>
                 </li>
               </ul>
             </div>
@@ -86,7 +86,7 @@ const Footer = () => {
                 <header className="footer__links__header">help</header>
                     <ul className="footer__links__list">
                       <li className="footer__links__list__item">
-                        <a href="#">faqs</a>
+                        <a href="/#">faqs</a>
                       </li>
                     </ul>
               </div>

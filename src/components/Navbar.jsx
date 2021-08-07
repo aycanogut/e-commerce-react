@@ -22,16 +22,16 @@ const Navbar = () => {
           <Link to="/shop">shop</Link>
         </li>
         <li className="nav__list--hidden-item">
-          <a href="#">contact</a>
+          <a href="/contact">contact</a>
         </li>
         <li className="nav__list--hidden-item">
-          <a href="#">about</a>
+          <a href="/about">about</a>
         </li>
         <li className="nav__list--hidden-item">
-          <a href="#">login</a>
+          <a href="/login">login</a>
         </li>
         <li className="nav__list--hidden-item">
-          <a href="#">sign up</a>
+          <a href="/sign-up">sign up</a>
         </li>
         <li className="nav__list--hidden-item">
           <img className="nav__list--hidden-item" src={IconClose} alt="" />
