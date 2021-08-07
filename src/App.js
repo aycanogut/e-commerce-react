@@ -4,6 +4,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getProductsAction } from './redux/actions/productActions';
 import { Switch, Route } from 'react-router-dom';
 import Shop from './components/Shop';
+import SignUp from './components/SignUp';
+import { Login } from './components/Login';
 const Header = lazy(() => import('./components/Header'));
 const Footer = lazy(() => import('./components/Footer'));
 
@@ -20,9 +22,11 @@ function App() {
     <div className="App">
       <Switch>
         <Suspense fallback={<div>Yükleniyor...</div>}>
-          <Route  path="/" component={Header} />
-          <Route path="/" component={Shop} />
-          <Route  path="/" component={Footer} />
+          <Route path="/" exact component={Header} />
+          <Route path="/shop" component={Shop} />
+          <Route path="/footer" component={Footer} />
+          <Route path="/melisa" component={SignUp} />
+          <Route path="/nihat" component={Login} />
         </Suspense>
       </Switch>
     </div>
