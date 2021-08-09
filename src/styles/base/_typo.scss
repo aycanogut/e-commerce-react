@@ -60,6 +60,25 @@ p {
   }
 }
 
+// shop
+.shop {
+  &__title {
+    font-family: $font-family-abril;
+    font-size: 4rem;
+    text-transform: capitalize;
+
+    // small breakpoint
+    @include mq(small) {
+      font-size: 5rem;
+    }
+
+    // medium breakpoint
+    @include mq(medium) {
+      font-size: 8rem;
+    }
+  }
+}
+
 // footer
 .footer {
   font-family: $font-family-lato;
