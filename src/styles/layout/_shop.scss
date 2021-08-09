@@ -1,0 +1,56 @@
+/// shop container
+
+@use '../abstracts/' as *;
+
+.shop {
+  padding: 5rem 0;
+
+  &__title {
+    padding: 0 0 5rem 0;
+    color: $color-dark-gray;
+
+    // small breakpoint
+    @include mq(small) {
+      padding: 0 0 7rem 0;
+    }
+
+    // medium breakpoint
+    @include mq(medium) {
+      padding: 0 0 12rem 0;
+    }
+  }
+
+  &__card__container {
+    @include make-container(2em);
+    display: flex;
+    flex-direction: column;
+
+    // small breakpoint
+    @include mq(small) {
+      @include make-container(4em);
+
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 20px;
+    }
+
+    // medium breakpoint
+    @include mq(medium) {
+      @include make-container(10em);
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__card {
+  }
+
+  // small breakpoint
+  @include mq(small) {
+    padding: 8rem 0;
+  }
+
+  // medium breakpoint
+  @include mq(medium) {
+    padding: 12rem 0;
+  }
+}
