@@ -1,6 +1,7 @@
 import React, {useEffect} from "react";
 import {getProductsAction} from "../redux/actions/productActions";
 import { useSelector, useDispatch } from "react-redux";
+import IconBasket from '../assets/icons/basket.svg';
 
 const Shop = () => {
   const dispatch = useDispatch();
@@ -18,9 +19,9 @@ const Shop = () => {
         {
           products.map(product =>(
             <section className="shop" key={product.id}>
-            <h2 className="shop__title">{product.name}</h2>
             <div className="shop__card">
               <article className="shop__card__item">
+                <h2 className="shop__title">{product.name}</h2>
                 <header>
                   <img className="shop__card__item__image" src={product.imageUrl} alt={product.name} />
                   {/* <h3 className="shop__card__item__title">Lorem, ipsum.</h3> */}
@@ -29,7 +30,7 @@ const Shop = () => {
                   </p>
                 </header>
                 <div className="shop__card__item__bottom">
-                  <img className="shop__card__item__bottom__icon" src="" alt="" />
+                  <img className="shop__card__item__bottom__icon" src={IconBasket} alt="" />
                   <span className="shop__card__item__bottom__old-price">
                     $999
                   </span>
