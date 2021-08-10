@@ -13,3 +13,9 @@ export const removeFromCartAction = (product) => {
     payload: product,
   };
 };
+
+export const totalPriceAction = () => {
+  return {
+    type: actionTypes.TOTAL_PRICE,
+  };
+};

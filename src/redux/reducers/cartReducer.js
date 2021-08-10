@@ -16,7 +16,7 @@ export default function cartReducer(state = initialValues, action) {
       }
       return {
         ...state,
-        cart: [...state.cart, action.payload],
+        cart: [...state.cart, { ...action.payload, quantity: 1 }],
       };
     case actionTypes.REMOVE_FROM_CART:
       const removeCartItem = state.cart.filter(
@@ -27,7 +27,14 @@ export default function cartReducer(state = initialValues, action) {
         ...state,
         cart: removeCartItem,
       };
-
+    case actionTypes.TOTAL_PRICE:
+      return {
+        ...state,
+        totalPrice: state.cart.reduce(
+          (acc, cartItem) => acc + cartItem.quantity * cartItem.totalPrice,
+          0
+        ),
+      };
     default:
       return state;
   }
