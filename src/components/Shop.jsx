@@ -1,8 +1,10 @@
-import React, {useEffect} from "react";
-import {getProductsAction} from "../redux/actions/productActions";
+import React, { useEffect } from "react";
+import { getProductsAction } from "../redux/actions/productActions";
 import { useSelector, useDispatch } from "react-redux";
-import IconBasket from '../assets/icons/basket.svg';
-import IconLike from '../assets/icons/like.svg';
+import IconBasket from "../assets/icons/basket.svg";
+import IconLike from "../assets/icons/like.svg";
+import Layout from "./Layout";
+import Header from "./Header";
 
 const Shop = () => {
   const dispatch = useDispatch();
@@ -15,30 +17,42 @@ const Shop = () => {
 
   console.log(products);
   return (
-    <main>
-      <section className="shop">
-        <h3 className="shop__title">shop</h3>
-        <div className="shop__container">
-        {
-            products.map(product =>(
-                  <article className="shop__card" key={product.id}>
-                  <header>
-                    <img className="shop__card__image" src={product.imageUrl} alt={product.name} />
-                    <h3 className="shop__card__title">{product.name}</h3>
-                  </header>
-                  <div className="shop__card__bottom">
-                    <img className="shop__card__bottom__icon" src={IconBasket} alt="" />
-                    <img className="shop__card__bottom__icon--like" src={IconLike} alt="" />
-                    <span className="shop__card__bottom__price">
+    <Layout>
+      <main>
+        <section className="shop">
+          <h3 className="shop__title">shop</h3>
+          <div className="shop__container">
+            {products.map((product) => (
+              <article className="shop__card" key={product.id}>
+                <header>
+                  <img
+                    className="shop__card__image"
+                    src={product.imageUrl}
+                    alt={product.name}
+                  />
+                  <h3 className="shop__card__title">{product.name}</h3>
+                </header>
+                <div className="shop__card__bottom">
+                  <img
+                    className="shop__card__bottom__icon"
+                    src={IconBasket}
+                    alt=""
+                  />
+                  <img
+                    className="shop__card__bottom__icon--like"
+                    src={IconLike}
+                    alt=""
+                  />
+                  <span className="shop__card__bottom__price">
                     ${product.price}
-                    </span>
-                  </div>
-                </article>
-            ))
-          }
-        </div>
-      </section>
-    </main>
+                  </span>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      </main>
+    </Layout>
   );
 };
 
