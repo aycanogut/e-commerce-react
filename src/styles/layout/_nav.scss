@@ -108,6 +108,15 @@
     }
   }
 
+  // small breakpoint
+  @include mq(small) {
+    padding: 2.3rem;
+  }
+
+  // medium breakpoint
+  @include mq(medium) {
+    padding: 4rem;
+  }
   // nav helper classes for hamburger action
   &__show {
     @include transition(0.8s);
@@ -115,6 +124,6 @@
   }
 
   &__hide {
-    // display: none;
+    display: none;
   }
 }
