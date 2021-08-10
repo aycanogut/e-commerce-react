@@ -60,6 +60,41 @@ p {
   }
 }
 
+// shop
+.shop {
+  &__title {
+    font-family: $font-family-abril;
+    font-size: 4rem;
+    text-transform: capitalize;
+
+    // small breakpoint
+    @include mq(small) {
+      font-size: 5rem;
+    }
+
+    // medium breakpoint
+    @include mq(medium) {
+      font-size: 8rem;
+    }
+  }
+
+  &__card {
+    &__title {
+      font-family: $font-family-rubik;
+      font-size: 2rem;
+      font-weight: map-get($font-weight, regular);
+    }
+
+    &__bottom {
+      &__price {
+        font-family: $font-family-rubik;
+        font-size: 3.8rem;
+        font-weight: map-get($font-weight, semi-bold);
+      }
+    }
+  }
+}
+
 // footer
 .footer {
   font-family: $font-family-lato;
