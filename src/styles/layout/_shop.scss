@@ -80,6 +80,8 @@
       padding: 0 1.2rem 0 1.6rem;
 
       &__icon {
+        cursor: pointer;
+
         &--like {
           max-width: 32px;
           max-height: 32px;
