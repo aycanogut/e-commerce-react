@@ -77,6 +77,22 @@ p {
       font-size: 8rem;
     }
   }
+
+  &__card {
+    &__title {
+      font-family: $font-family-rubik;
+      font-size: 2rem;
+      font-weight: map-get($font-weight, regular);
+    }
+
+    &__bottom {
+      &__price {
+        font-family: $font-family-rubik;
+        font-size: 3.8rem;
+        font-weight: map-get($font-weight, semi-bold);
+      }
+    }
+  }
 }
 
 // footer
