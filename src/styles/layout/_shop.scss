@@ -39,6 +39,16 @@
       @include make-container(10em);
       grid-template-columns: repeat(3, 1fr);
     }
+
+    // x-large breakpoint
+    @include mq(x-large) {
+      @include make-container(20em);
+    }
+
+    // xx-large breakpoint
+    @include mq(xx-large) {
+      @include make-container(20%);
+    }
   }
 
   // card styles
