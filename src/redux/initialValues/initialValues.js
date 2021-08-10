@@ -4,4 +4,5 @@ export const initialValues = {
   user: {},
   products: [],
   product: {},
+  totalPrice: null,
 };
