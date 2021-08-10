@@ -50,6 +50,16 @@
       order: 1;
       margin: 0 1rem 0 auto;
       padding: 0;
+
+      // small breakpoint
+      @include mq(small) {
+        margin: 0 1rem 5rem auto;
+      }
+
+      // medium breakpoint
+      @include mq(medium) {
+        margin: 0 1rem 5rem auto;
+      }
     }
 
     // only run this code on mobile screens
@@ -120,11 +130,12 @@
   }
   // nav helper classes for hamburger action
   &__show {
-    @include transition(0.8s);
+    @include transition(0.7s ease-in);
     left: 0;
   }
 
   &__hide {
-    display: none;
+    @include transition(0.7s ease-in);
+    transform: translateY(-300%);
   }
 }
