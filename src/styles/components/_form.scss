@@ -5,6 +5,11 @@
 .form {
   margin: 5rem 0;
 
+  // small breakpoint
+  @include mq(small) {
+    @include make-container(0.5rem);
+  }
+
   &__form {
     width: 100%;
     margin: 5rem auto;
@@ -14,7 +19,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 1rem 0 0 6rem;
+    margin: 1rem 0 0 5rem;
   }
 
   // error message
@@ -25,8 +30,8 @@
 
   &__label {
     width: 30%;
-    margin: -1.3rem 1rem 0 0;
-    text-align: right;
+    margin: 0 1rem 0 0;
+    text-align: left;
     color: $color-dark-gray;
 
     &__wrapper {
@@ -37,8 +42,13 @@
 
   &__input {
     display: inline-block;
-    width: 30%;
-    padding: 0.4rem 6rem;
+    text-align: left;
+    padding: 0.4rem 0;
+
+    // medium breakpoint
+    @include mq(medium) {
+      width: 150%;
+    }
   }
 
   label + input {
