@@ -7,7 +7,27 @@
 
   // small breakpoint
   @include mq(small) {
-    @include make-container(0.5rem);
+    @include make-container(10rem);
+  }
+
+  // medium breakpoint
+  @include mq(medium) {
+    @include make-container(15rem);
+  }
+
+  // large breakpoint
+  @include mq(large) {
+    @include make-container(25rem);
+  }
+
+  // x-large breakpoint
+  @include mq(x-large) {
+    @include make-container(45rem);
+  }
+
+  // xx-large breakpoint
+  @include mq(xx-large) {
+    @include make-container(50rem);
   }
 
   &__form {
