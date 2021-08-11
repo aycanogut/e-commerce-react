@@ -37,16 +37,15 @@ const SignUp = () => {
         console.log(values)
       }}
     >
-      
         <div className="form">
           <h1 className="form__title">Sign Up</h1>
           <Form className="form__form">
-            <TextField label="First Name" name="firstName" type="text" />
-            <TextField label="Last Name" name="lastName" type="text" />
-            <TextField label="Email" name="email" type="email" />
-            <TextField label="Password" name="password" type="password" />
-            <TextField label="Confirm Password" name="confirmPassword" type="password" />
-            <button className="btn btn-dark mt-3" type="submit">Register</button>
+            <TextField label="First Name: " name="firstName" type="text" />
+            <TextField label="Last Name: " name="lastName" type="text" />
+            <TextField label="Email: " name="email" type="email" />
+            <TextField label="Password: " name="password" type="password" />
+            <TextField label="Confirm Password: " name="confirmPassword" type="password" />
+            <button className="form__btn" type="submit">Register</button>
             <button className="form__btn" type="reset">Reset</button>
           </Form>
         </div>

@@ -30,8 +30,8 @@ const Login = () => {
           <div className="form">
             <h1 className="form__title">Sign In</h1>
             <Form className="form__form">
-              <TextField className="form__textfield" label="Email" name="email" type="email" />
-              <TextField className="form__textfield" label="Password" name="password" type="password" />
+              <TextField label="Email: " name="email" type="email" />
+              <TextField label="Password: " name="password" type="password" />
               <button className="form__btn" type="submit">
                 Login
               </button>
