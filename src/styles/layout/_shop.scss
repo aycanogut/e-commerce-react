@@ -71,7 +71,13 @@
 
     &__title {
       margin: 2rem 0;
+      padding: 2rem 0;
       color: $color-dark-gray;
+
+      // large breakpoint
+      @include mq(large) {
+        padding: 3rem 0 0 0;
+      }
     }
 
     &__bottom {
@@ -92,6 +98,11 @@
       &__price {
         margin: 0 0 0 auto;
         color: $color-yellow;
+      }
+
+      // large breakpoint
+      @include mq(large) {
+        padding: 2rem;
       }
     }
 
