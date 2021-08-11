@@ -27,21 +27,16 @@ const Login = () => {
           console.log(values);
         }}
       >
-        <div>
-          <div className="">
-            <h1 className="">Sign In</h1>
-            <Form>
-              <TextField label="Email" name="email" type="email" />
-              <TextField label="password" name="password" type="password" />
-              <button className="btn btn-dark mt-3" type="submit">
+          <div className="form">
+            <h1 className="form__title">Sign In</h1>
+            <Form className="form__form">
+              <TextField className="form__textfield" label="Email" name="email" type="email" />
+              <TextField className="form__textfield" label="Password" name="password" type="password" />
+              <button className="form__btn" type="submit">
                 Login
               </button>
             </Form>
           </div>
-          <div className="">
-            <img src="" alt="" />
-          </div>
-        </div>
       </Formik>
     </Layout>
   );
