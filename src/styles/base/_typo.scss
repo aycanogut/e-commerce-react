@@ -96,6 +96,21 @@ p {
   }
 }
 
+// form
+.form {
+  font-family: $font-family-rubik;
+
+  &__label {
+    font-size: 1.3rem;
+    font-weight: map-get($font-weight, semi-bold);
+  }
+
+  &__btn {
+    font-size: 1.4rem;
+    font-weight: map-get($font-weight, semi-bold);
+  }
+}
+
 // footer
 .footer {
   font-family: $font-family-lato;
