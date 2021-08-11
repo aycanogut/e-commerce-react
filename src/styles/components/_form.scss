@@ -6,21 +6,33 @@
   margin: 5rem 0;
 
   &__form {
-    width: 80%;
+    width: 100%;
     margin: 5rem auto;
   }
 
   &__textfield {
     display: flex;
     align-items: center;
-    margin: 1rem 0;
+    justify-content: center;
+    margin: 1rem 0 0 6rem;
+  }
+
+  // error message
+  &__error {
+    padding: 0.4rem 0 0 0;
+    color: $color-red;
   }
 
   &__label {
-    display: inline-block;
     width: 30%;
+    margin: -1.3rem 1rem 0 0;
     text-align: right;
     color: $color-dark-gray;
+
+    &__wrapper {
+      display: inline-block;
+      text-align: left;
+    }
   }
 
   &__input {
@@ -35,6 +47,19 @@
   }
 
   &__btn {
+    @include transition(0.25s ease-in);
     margin: 2rem 1rem;
+    padding: 0.8rem 2rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 2rem;
+    background-color: $color-yellow;
+    color: $color-dark-gray;
+
+    &:hover {
+      @include transition(0.25s ease-in);
+      background-color: $color-pink;
+      color: $color-white;
+    }
   }
 }
