@@ -2,6 +2,7 @@ import React from 'react';
 import { Formik, Form } from 'formik';
 import { TextField } from './TextField';
 import * as Yup from 'yup';
+import Layout from './Layout';
 
 const SignUp = () => {
   const validate = Yup.object({
@@ -22,7 +23,8 @@ const SignUp = () => {
       .required('Confirm password is required'),
   })
   return (
-    <Formik
+  <Layout>
+      <Formik
       initialValues={{
         firstName: '',
         lastName: '',
@@ -58,6 +60,7 @@ const SignUp = () => {
         </div>
       
     </Formik>
+  </Layout>
   )
 }
 
