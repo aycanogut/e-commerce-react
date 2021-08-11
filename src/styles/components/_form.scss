@@ -1,0 +1,31 @@
+/// form
+
+@use '../abstracts/' as *;
+
+.form {
+  margin: 5rem 0;
+  &__form {
+    width: 80%;
+    margin: 5rem auto;
+  }
+
+  &__textfield {
+  }
+
+  &__label {
+    display: inline-block;
+    width: 30%;
+    text-align: right;
+  }
+
+  &__input {
+    display: inline-block;
+    width: 30%;
+    padding: 0.4rem 5rem;
+  }
+
+  label + input {
+    width: 30%;
+    margin: 0 10% 0 10%;
+  }
+}
