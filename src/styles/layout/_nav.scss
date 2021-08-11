@@ -17,6 +17,7 @@
     align-items: center;
     margin: 0 0 0 auto;
     z-index: 10;
+    cursor: pointer;
 
     &__item {
       display: flex;
@@ -43,6 +44,7 @@
 
     &-item {
       padding: 3rem 0;
+      cursor: pointer;
     }
 
     // change order of elements (put close X to up)
@@ -103,10 +105,6 @@
       // nav items spacing
       &-item {
         margin: 0 5rem;
-      }
-
-      &-item:first-child {
-        margin: 0;
       }
 
       &-item:nth-child(4) {
