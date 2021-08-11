@@ -77,23 +77,6 @@ p {
       font-size: 8rem;
     }
   }
-
-  &__card {
-    &__title {
-      font-family: $font-family-rubik;
-      font-size: 2.4rem;
-      font-weight: map-get($font-weight, semi-bold);
-      text-transform: uppercase;
-    }
-
-    &__bottom {
-      &__price {
-        font-family: $font-family-rubik;
-        font-size: 3.8rem;
-        font-weight: map-get($font-weight, semi-bold);
-      }
-    }
-  }
 }
 
 // form
@@ -122,5 +105,23 @@ p {
   &__links {
     font-size: 1.6rem;
     text-transform: capitalize;
+  }
+}
+
+// card
+.card {
+  &__title {
+    font-family: $font-family-rubik;
+    font-size: 2.4rem;
+    font-weight: map-get($font-weight, semi-bold);
+    text-transform: uppercase;
+  }
+
+  &__bottom {
+    &__price {
+      font-family: $font-family-rubik;
+      font-size: 3.8rem;
+      font-weight: map-get($font-weight, semi-bold);
+    }
   }
 }
