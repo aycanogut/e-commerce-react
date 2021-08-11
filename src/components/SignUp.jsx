@@ -39,9 +39,8 @@ const SignUp = () => {
     >
       
         <div>
-            <div className="">
-            <h1 className="">Sign Up</h1>
-            <Form>
+          <h1 className="">Sign Up</h1>
+          <Form>
             <TextField label="First Name" name="firstName" type="text" />
             <TextField label="last Name" name="lastName" type="text" />
             <TextField label="Email" name="email" type="email" />
@@ -50,13 +49,6 @@ const SignUp = () => {
             <button className="btn btn-dark mt-3" type="submit">Register</button>
             <button className="btn btn-danger mt-3 ml-3" type="reset">Reset</button>
           </Form>
-            </div>
-
-            <div className="">
-                <img src="" alt="" />
-            </div>
-         
-       
         </div>
       
     </Formik>
