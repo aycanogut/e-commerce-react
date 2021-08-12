@@ -32,7 +32,7 @@ const Login = () => {
             <Form className="form__form">
               <TextField label="Email: " name="email" type="email" />
               <TextField label="Password: " name="password" type="password" />
-              <button className="form__btn" type="submit">
+              <button className="btn btn--form" type="submit">
                 Login
               </button>
             </Form>

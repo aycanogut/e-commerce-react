@@ -52,13 +52,13 @@ const Payment = () => {
                 ))}
             </section>
             <aside className="payment__payment">
-              <h1 className="payment">Payment</h1>
+              <h1 className="payment__title">Payment</h1>
               <div className="card card--payment">
-                <section className="card__price">
-                  <h2 className="card__price__total">Total Price :</h2>
-                  <span className="card__$">$`${123}`</span>
+                <section className="card--payment__price">
+                  <h2 className="card--payment__price__total">Total Price :</h2>
+                  <span className="card--payment__money">$123</span>
                 </section>
-                <button className="card__checkout">Checkout</button>
+                <button className="btn btn--payment">Checkout</button>
               </div>
             </aside>
           </div>

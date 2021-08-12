@@ -45,8 +45,8 @@ const SignUp = () => {
             <TextField label="Email: " name="email" type="email" />
             <TextField label="Password: " name="password" type="password" />
             <TextField label="Confirm Password: " name="confirmPassword" type="password" />
-            <button className="form__btn" type="submit">Register</button>
-            <button className="form__btn" type="reset">Reset</button>
+            <button className="btn btn--form" type="submit">Register</button>
+            <button className="btn btn--form" type="reset">Reset</button>
           </Form>
         </div>
       
