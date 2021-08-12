@@ -3,7 +3,7 @@
 @use '../abstracts/' as *;
 
 .form {
-  margin: 10rem 0;
+  margin: 5rem 0;
 
   // small breakpoint
   @include mq(small) {
@@ -18,7 +18,6 @@
   // large breakpoint
   @include mq(large) {
     @include make-container(25rem);
-    margin: 12.5rem 0;
   }
 
   // x-large breakpoint
@@ -26,10 +25,9 @@
     @include make-container(45rem);
   }
 
-  // xxx-large breakpoint
-  @include mq(xxx-large) {
+  // xx-large breakpoint
+  @include mq(xx-large) {
     @include make-container(50rem);
-    margin: 66.5rem 0;
   }
 
   &__form {
