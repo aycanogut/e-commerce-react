@@ -75,21 +75,4 @@
     width: 30%;
     margin: 0 10% 0 10%;
   }
-
-  &__btn {
-    @include transition(0.25s ease-in);
-    margin: 2rem 1rem;
-    padding: 0.8rem 2rem;
-    cursor: pointer;
-    border: none;
-    border-radius: 2rem;
-    background-color: $color-yellow;
-    color: $color-dark-gray;
-
-    &:hover {
-      @include transition(0.25s ease-in);
-      background-color: $color-pink;
-      color: $color-white;
-    }
-  }
 }

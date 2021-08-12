@@ -87,11 +87,6 @@ p {
     font-size: 1.3rem;
     font-weight: map-get($font-weight, semi-bold);
   }
-
-  &__btn {
-    font-size: 1.4rem;
-    font-weight: map-get($font-weight, semi-bold);
-  }
 }
 
 // footer
@@ -124,4 +119,23 @@ p {
       font-weight: map-get($font-weight, semi-bold);
     }
   }
+
+  &--payment {
+    font-family: $font-family-rubik;
+
+    h2 {
+      font-size: 2.2rem;
+    }
+
+    &__money {
+      font-size: 1.8rem;
+      font-weight: map-get($font-weight, semi-bold);
+    }
+  }
+}
+
+// button
+.btn {
+  font-size: 1.4rem;
+  font-weight: map-get($font-weight, semi-bold);
 }

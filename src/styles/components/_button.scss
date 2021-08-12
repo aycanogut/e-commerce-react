@@ -1,0 +1,24 @@
+/// buttons
+
+@use '../abstracts/' as *;
+
+.btn {
+  @include transition(0.25s ease-in);
+  margin: 2rem 1rem;
+  padding: 1.2rem 3rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 2rem;
+  background-color: $color-yellow;
+  color: $color-dark-gray;
+
+  &:hover {
+    @include transition(0.25s ease-in);
+    background-color: $color-pink;
+    color: $color-white;
+  }
+
+  &--payment {
+    margin: 1rem 0 0 0;
+  }
+}
