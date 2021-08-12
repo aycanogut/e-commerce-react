@@ -4,7 +4,6 @@
 
 .btn {
   @include transition(0.25s ease-in);
-  margin: 2rem 1rem;
   padding: 1.2rem 3rem;
   cursor: pointer;
   border: none;
@@ -20,5 +19,9 @@
 
   &--payment {
     margin: 1rem 0 0 0;
+  }
+
+  &--form {
+    margin: 3rem 1rem;
   }
 }
