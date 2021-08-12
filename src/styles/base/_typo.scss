@@ -110,7 +110,14 @@ p {
   font-family: $font-family-lato;
 
   &__title {
-    font-size: 3rem;
+    font-size: 2.4rem;
+    font-weight: map-get($font-weight, regular);
+
+    // small breakpoint
+    @include mq(small) {
+      font-size: 3rem;
+      font-weight: map-get($font-weight, semi-bold);
+    }
   }
 
   &__links {
