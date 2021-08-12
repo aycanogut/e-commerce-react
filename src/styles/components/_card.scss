@@ -32,6 +32,7 @@
   &__bottom {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 0 1.2rem 0 1.6rem;
 
     &__icon {
@@ -40,12 +41,12 @@
       &--like {
         max-width: 32px;
         max-height: 32px;
-        margin: 0.7rem 0 0 1rem;
+        margin: 0 0 0 1rem;
       }
     }
 
     &__price {
-      margin: 0 0 0 auto;
+      margin: 0.7rem 0 0 auto;
       color: $color-yellow;
     }
 
@@ -65,6 +66,7 @@
     margin: 0 auto 8rem auto;
   }
 
+  // hover states
   &--shop,
   &--shopping-bag {
     &:hover {
@@ -75,6 +77,7 @@
   }
 
   &--payment {
+    @include box-shadow(0px 5px 15px -3px rgba(0, 0, 0, 0.35));
     padding: 3rem;
 
     &__price {
@@ -83,12 +86,29 @@
       align-items: center;
       padding: 2rem 0;
     }
+
     &__checkout {
       padding: 1rem 2rem;
     }
 
     &__money {
       color: $color-red;
+    }
+
+    // small breakpoint
+    @include mq(small) {
+      margin: 0;
+    }
+  }
+
+  &--shopping-bag {
+    .card__image {
+      width: 100%;
+    }
+
+    // large breakpoint
+    @include mq(large) {
+      width: 100%;
     }
   }
 }
