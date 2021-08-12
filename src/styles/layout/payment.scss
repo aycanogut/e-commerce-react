@@ -3,7 +3,12 @@
 @use '../abstracts/' as *;
 
 .payment {
-  padding: 5rem 0;
+  border: 1px solid #000;
+
+  h1 {
+    margin: 3rem 0;
+    padding: 0;
+  }
 
   &__title {
     padding: 0 0 5rem 0;
@@ -59,6 +64,7 @@
 
   &__payment {
     order: 1;
+    color: $color-dark-gray;
   }
 
   // small breakpoint
