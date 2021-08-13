@@ -13,30 +13,32 @@ const Navbar = () => {
 
   return (
     <nav className="nav">
-      <span className="nav__brand">More.</span>
+      <a href="/">
+       <span className="nav__brand">More.</span>
+      </a>
       <ul className={`nav__list ${isOpen ? "nav__hide" : "nav__show"}`}>
         <li className="nav__list__item" onClick={handleHamburgerMenu}>
           <img src={IconHamburger} alt=""  />
         </li>
         <li className="nav__list__item">
-          <img src={IconBasket} alt="" />
+          <a href="/payment"><img src={IconBasket} alt="" /></a>
         </li>
       </ul>
       <ul className={`nav__list--hidden ${isOpen ? "nav__show" : "nav__hide"}`}>
         <li className="nav__list--hidden-item">
-          <Link to="/shop">shop</Link>
+          <a href="/">shop</a>
         </li>
         <li className="nav__list--hidden-item">
-          <a href="/contact">contact</a>
+          <a href="/">contact</a>
         </li>
         <li className="nav__list--hidden-item">
-          <a href="/about">about</a>
+          <a href="/">about</a>
         </li>
         <li className="nav__list--hidden-item">
           <a href="/login">login</a>
         </li>
         <li className="nav__list--hidden-item">
-          <a href="/sign-up">sign up</a>
+          <a href="/signup">sign up</a>
         </li>
         <li className="nav__list--hidden-item" onClick={handleHamburgerMenu}>
           <img className="nav__list--hidden-item" src={IconClose} alt="" />
