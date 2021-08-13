@@ -1,53 +1,57 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { getProductsAction } from "../redux/actions/productActions";
 import { useSelector, useDispatch } from "react-redux";
-import IconBasket from "../assets/icons/basket.svg";
-import IconLike from "../assets/icons/like.svg";
 import Layout from "./Layout";
-import Header from "./Header";
+import { addToCartAction } from "../redux/actions/cartActions";
+import {
+  addToFavoriteAction,
+  removeFromFavoriteAction,
+} from "../redux/actions/favoriteActions";
+import toast, { Toaster } from "react-hot-toast";
+import Card from "./Card";
 
 const Shop = () => {
   const dispatch = useDispatch();
   const getProducts = () => dispatch(getProductsAction());
-  const products = useSelector((state) => state.product.products);
+  const { products } = useSelector((state) => state.product);
+  const { favorites } = useSelector((state) => state.favorites);
 
   useEffect(() => {
     getProducts();
   }, []);
 
-  console.log(products);
+  const addToCart = (product) => {
+    dispatch(addToCartAction(product));
+    toast.success(`${product.name} added to cart`);
+  };
+
+  const toggleFavorites = (product) => {
+    const isFavorites = favorites.find(
+      (favorite) => favorite.id === product.id
+    );
+
+    if (isFavorites) {
+      dispatch(removeFromFavoriteAction(product));
+      toast.success(`${product.name} removed from favorites`);
+    } else {
+      dispatch(addToFavoriteAction(product));
+      toast.success(`${product.name} added to favorites`);
+    }
+  };
   return (
     <Layout>
+      <Toaster position="bottom-right" />
       <main>
         <section className="shop">
           <h3 className="shop__title">shop</h3>
           <div className="shop__container">
             {products.map((product) => (
-              <article className="card card--shop" key={product.id}>
-                <header>
-                  <img
-                    className="card__image"
-                    src={product.imageUrl}
-                    alt={product.name}
-                  />
-                  <h3 className="card__title">{product.name}</h3>
-                </header>
-                <div className="card__bottom">
-                  <img
-                    className="card__bottom__icon"
-                    src={IconBasket}
-                    alt=""
-                  />
-                  <img
-                    className="card__bottom__icon--like"
-                    src={IconLike}
-                    alt=""
-                  />
-                  <span className="card__bottom__price">
-                    ${product.price}
-                  </span>
-                </div>
-              </article>
+              <Card
+                product={product}
+                key={product.id}
+                addToCart={() => addToCart(product)}
+                toggleFavorites={() => toggleFavorites(product)}
+              />
             ))}
           </div>
         </section>

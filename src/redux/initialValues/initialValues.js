@@ -5,4 +5,5 @@ export const initialValues = {
   products: [],
   product: {},
   totalPrice: null,
+  isFavorite: false,
 };
