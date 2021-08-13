@@ -5,6 +5,7 @@
 .card {
   @include box-shadow(0px 10px 15px -3px rgba(0, 0, 0, 0.15));
   @include transition(all 0.3s ease);
+  max-width: 40rem;
   margin: 0 auto 5rem auto;
   padding: 0 0 1rem 0;
   border-radius: 1rem;
