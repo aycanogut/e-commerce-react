@@ -1,0 +1,110 @@
+/// payment container
+
+@use '../abstracts/' as *;
+
+.payment {
+  margin: 0 5%;
+
+  &__title {
+    margin: 5rem 0;
+    padding: 0;
+    color: $color-dark-gray;
+
+    // small breakpoint
+    @include mq(small) {
+      // padding: 0 0 7rem 0;
+    }
+
+    // medium breakpoint
+    @include mq(medium) {
+      // padding: 0 0 12rem 0;
+    }
+  }
+
+  &__container {
+    @include make-container(2rem);
+    display: flex;
+    flex-direction: column;
+
+    // small breakpoint
+    @include mq(small) {
+      @include make-container(4rem);
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 20px;
+    }
+
+    // medium breakpoint
+    @include mq(medium) {
+      grid-template-columns: 10fr 2fr;
+    }
+    // large breakpoint
+    @include mq(large) {
+      @include make-container(10rem);
+    }
+
+    // x-large breakpoint
+    @include mq(x-large) {
+      @include make-container(15rem);
+    }
+
+    // xx-large breakpoint
+    @include mq(xx-large) {
+      // @include make-container(20%);
+    }
+  }
+
+  &__products {
+    order: 2;
+
+    // small breakpoint
+    @include mq(small) {
+      margin: 0 1rem;
+    }
+
+    // medium breakpoint
+    @include mq(medium) {
+      margin: 0 2rem;
+    }
+
+    &__container {
+      // large breakpoint
+      @include mq(large) {
+        display: grid;
+        grid: auto-flow / 1fr 1fr;
+        grid-column-gap: 3rem;
+      }
+
+      // x-large breakpoint
+      @include mq(x-large) {
+        @include make-container(10%);
+      }
+
+      // xx-large breakpoint
+      @include mq(xx-large) {
+        @include make-container(15%);
+      }
+    }
+  }
+
+  &__payment {
+    order: 1;
+    color: $color-dark-gray;
+
+    // small breakpoint
+    @include mq(small) {
+      order: 2;
+      margin: 0 1rem;
+    }
+
+    // medium breakpoint
+    @include mq(medium) {
+      margin: 0 2rem;
+    }
+  }
+
+  // small breakpoint
+  @include mq(small) {
+    margin: 0;
+  }
+}
