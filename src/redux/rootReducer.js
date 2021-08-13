@@ -7,14 +7,20 @@ import { persistReducer } from "redux-persist";
 import productReducer from "./reducers/productReducer";
 
 const persistConfig = {
-  key: "root",
+  key: "cart",
   storage,
   whitelist: ["cart"],
 };
 
+const favoritesPersistConfig = {
+  key: "favorites",
+  storage,
+  whitelist: ["favorites"],
+};
+
 const rootReducer = combineReducers({
   cart: cartReducer,
-  favorites: favoriteReducer,
+  favorites: persistReducer(favoritesPersistConfig, favoriteReducer),
   auth: authReducer,
   product: productReducer,
 });

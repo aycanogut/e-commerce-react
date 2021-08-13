@@ -13,7 +13,7 @@ const Layout = ({ children }) => {
     if (history.location.pathname === '/') {
       setIsHome(true);
     }
-  }, [])
+  }, [history])
 
 
   return (

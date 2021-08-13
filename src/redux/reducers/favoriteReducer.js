@@ -3,24 +3,21 @@ import { initialValues } from "../initialValues/initialValues";
 
 export default function favoriteReducer(state = initialValues, action) {
   switch (action.type) {
-    case actionTypes.TOGGLE_FAVORITES:
-      const isFavorite = state.favorites.find(
-        (favoriteItem) => favoriteItem.id === action.payload.id
-      );
-      if (isFavorite) {
-        const removeFavoriteItem = state.favorites.filter(
-          (favoriteItem) => favoriteItem.id !== action.payload.id
-        );
-        return {
-          ...state,
-          favorites: removeFavoriteItem,
-        };
-      }
+    case actionTypes.ADD_TO_FAVORITES:
+      action.payload.isFavorite = true;
       return {
         ...state,
-        favorites: [...state.favorites, action.payload],
+        favorites: [...state.favorites, { ...action.payload }],
       };
-
+    case actionTypes.REMOVE_FROM_FAVORITES:
+      action.payload.isFavorite = false;
+      const removeFavoriteItem = state.favorites.filter(
+        (favoriteItem) => favoriteItem.id !== action.payload.id
+      );
+      return {
+        ...state,
+        favorites: removeFavoriteItem,
+      };
     default:
       return state;
   }

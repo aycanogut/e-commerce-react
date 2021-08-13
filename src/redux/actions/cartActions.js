@@ -19,3 +19,9 @@ export const totalPriceAction = () => {
     type: actionTypes.TOTAL_PRICE,
   };
 };
+
+export const clearCartAction = () => {
+  return {
+    type: actionTypes.CLEAR_CART,
+  };
+};

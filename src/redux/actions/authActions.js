@@ -38,3 +38,10 @@ export const currentUserAction = () => {
     );
   };
 };
+
+export const logoutAction = () => {
+  return async (dispatch) => {
+    await auth.signOut();
+    dispatch({ type: actionTypes.LOGOUT });
+  };
+};

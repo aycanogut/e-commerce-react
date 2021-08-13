@@ -11,16 +11,16 @@ const Favorites = lazy(() => import("./components/Favorites"));
 function App() {
   return (
     <div className="App">
+     <Suspense fallback={<div>Yükleniyor...</div>}>
       <Switch>
-        <Suspense fallback={<div>Yükleniyor...</div>}>
           <Route path="/" exact component={Shop} />
           <Route path="/payment" exact component={Payment} />
           <Route path="/favorites" exact component={Favorites} />
           <Route path="/footer" component={Footer} />
           <Route path="/login" component={Login} />
           <Route path="/signup" component={SignUp} />
-        </Suspense>
       </Switch>
+      </Suspense>
     </div>
   );
 }
