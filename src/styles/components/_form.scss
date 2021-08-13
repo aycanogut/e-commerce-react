@@ -5,31 +5,6 @@
 .form {
   margin: 5rem 0;
 
-  // small breakpoint
-  @include mq(small) {
-    @include make-container(10rem);
-  }
-
-  // medium breakpoint
-  @include mq(medium) {
-    @include make-container(15rem);
-  }
-
-  // large breakpoint
-  @include mq(large) {
-    @include make-container(25rem);
-  }
-
-  // x-large breakpoint
-  @include mq(x-large) {
-    @include make-container(45rem);
-  }
-
-  // xx-large breakpoint
-  @include mq(xx-large) {
-    @include make-container(50rem);
-  }
-
   &__form {
     width: 100%;
     margin: 5rem auto;
@@ -39,6 +14,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 1rem 0;
   }
 
   // error message
@@ -73,5 +49,31 @@
   label + input {
     width: 30%;
     margin: 0 10% 0 10%;
+  }
+
+  // small breakpoint
+  @include mq(small) {
+    @include make-container(10rem);
+  }
+
+  // medium breakpoint
+  @include mq(medium) {
+    @include make-container(15rem);
+  }
+
+  // large breakpoint
+  @include mq(large) {
+    @include make-container(25rem);
+    margin: -3rem 0 0 0;
+  }
+
+  // x-large breakpoint
+  @include mq(x-large) {
+    @include make-container(45rem);
+  }
+
+  // xx-large breakpoint
+  @include mq(xx-large) {
+    @include make-container(50rem);
   }
 }
