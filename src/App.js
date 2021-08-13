@@ -6,6 +6,7 @@ const SignUp = lazy(() => import("./components/SignUp"));
 const Login = lazy(() => import("./components/Login"));
 const Shop = lazy(() => import("./components/Shop"));
 const Payment = lazy(() => import("./components/Payment"));
+const Favorites = lazy(() => import("./components/Favorites"));
 
 function App() {
   return (
@@ -14,9 +15,10 @@ function App() {
         <Suspense fallback={<div>Yükleniyor...</div>}>
           <Route path="/" exact component={Shop} />
           <Route path="/payment" exact component={Payment} />
+          <Route path="/favorites" exact component={Favorites} />
           <Route path="/footer" component={Footer} />
-          <Route path="/melisa" component={SignUp} />
-          <Route path="/nihat" component={Login} />
+          <Route path="/login" component={Login} />
+          <Route path="/signup" component={SignUp} />
         </Suspense>
       </Switch>
     </div>
