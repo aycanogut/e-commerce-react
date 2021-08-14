@@ -4,7 +4,7 @@ const Title = ({ title }) => {
   return (
     <Helmet>
       <meta charSet="utf-8" />
-      <title>{title} | E-commerce</title>
+      <title>More | {title}</title>
     </Helmet>
   );
 };
