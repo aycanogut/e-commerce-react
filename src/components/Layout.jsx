@@ -5,16 +5,14 @@ import Footer from "./Footer";
 import Header from "./Header";
 
 const Layout = ({ children }) => {
-
   const history = useHistory();
   const [isHome, setIsHome] = useState(false);
 
   useEffect(() => {
-    if (history.location.pathname === '/') {
+    if (history.location.pathname === "/") {
       setIsHome(true);
     }
-  }, [history])
-
+  }, [history]);
 
   return (
     <div>

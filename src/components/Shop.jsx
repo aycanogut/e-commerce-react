@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { getProductsAction } from "../redux/actions/productActions";
 import { useSelector, useDispatch } from "react-redux";
 import Layout from "./Layout";
