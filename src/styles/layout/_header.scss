@@ -27,7 +27,7 @@
     }
 
     &__button {
-      margin: 7rem 0 0 1.4rem;
+      margin: 4rem 0 0 1.4rem;
 
       a {
         display: block;
@@ -45,9 +45,24 @@
         }
       }
 
+      // small breakpoint
+      @include mq(small) {
+        margin: 3rem 0 0 1.4rem;
+      }
+
+      // medium breakpoint
+      @include mq(medium) {
+        margin: 7rem 0 0 1.4rem;
+      }
+
       // large breakpoint
       @include mq(large) {
-        margin: 12rem 0 0 4rem;
+        margin: 8rem 0 0 4rem;
+      }
+
+      // xx-large breakpoint
+      @include mq(xx-large) {
+        margin: 3.5rem 0 0 5rem;
       }
     }
 
