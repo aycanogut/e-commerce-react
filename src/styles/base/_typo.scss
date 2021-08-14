@@ -58,6 +58,11 @@ p {
     }
   }
 
+  &__list__item:first-of-type {
+    font-size: 1.6rem;
+    text-transform: capitalize;
+  }
+
   &__list--hidden-item {
     font-size: 3rem;
     text-transform: capitalize;

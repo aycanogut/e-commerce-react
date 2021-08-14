@@ -27,6 +27,9 @@ const Navbar = () => {
         <span className="nav__brand">More.</span>
       </Link>
       <ul className={`nav__list ${isOpen ? "nav__hide" : "nav__show"}`}>
+        <li onClick={logout} className="nav__list__item">
+          {user && "logout"}
+        </li>
         <li className="nav__list__item" onClick={handleHamburgerMenu}>
           <img src={IconHamburger} alt="" />
         </li>
@@ -35,9 +38,7 @@ const Navbar = () => {
             <img src={IconBasket} alt="" />
           </Link>
         </li>
-        {/* <li onClick={logout} className="nav__list__item">
-          {user && "logout"}
-        </li> */}
+
       </ul>
       <ul className={`nav__list--hidden ${isOpen ? "nav__show" : "nav__hide"}`}>
         <li className="nav__list--hidden-item">

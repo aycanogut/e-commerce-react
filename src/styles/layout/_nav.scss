@@ -32,6 +32,11 @@
       height: 2.8rem;
     }
 
+    &__item:first-of-type {
+      margin: 1rem 4rem 0 0;
+      color: $color-dark-gray;
+    }
+
     &__item:nth-last-child(1) {
       margin: 0 0 0.5rem 2rem;
     }
