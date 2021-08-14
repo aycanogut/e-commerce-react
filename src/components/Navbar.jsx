@@ -35,19 +35,19 @@ const Navbar = () => {
             <img src={IconBasket} alt="" />
           </Link>
         </li>
-        <li onClick={logout} className="nav__list__item">
+        {/* <li onClick={logout} className="nav__list__item">
           {user && "logout"}
-        </li>
+        </li> */}
       </ul>
       <ul className={`nav__list--hidden ${isOpen ? "nav__show" : "nav__hide"}`}>
         <li className="nav__list--hidden-item">
           <Link to="/">shop</Link>
         </li>
         <li className="nav__list--hidden-item">
-          <Link to="/">contact</Link>
+          <Link to="/favorites">favorites</Link>
         </li>
         <li className="nav__list--hidden-item">
-          <Link to="/favorites">favorites</Link>
+          <Link to="/payment">payment</Link>
         </li>
         {user ? (
           <li onClick={logout} className="nav__list--hidden-item">
