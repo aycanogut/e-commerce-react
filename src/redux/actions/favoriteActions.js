@@ -13,3 +13,4 @@ export const removeFromFavoriteAction = (product) => {
     payload: product,
   };
 };
+

@@ -8,6 +8,7 @@ import {
 } from "../redux/actions/cartActions";
 import Checkout from "./Checkout";
 import Layout from "./Layout";
+import Title from "./Title";
 
 const Payment = () => {
   const { cart } = useSelector((state) => state.cart);
@@ -22,6 +23,7 @@ const Payment = () => {
 
   return (
     <Layout>
+      <Title title="Payment" />
       <main>
         <section className="payment">
           <h1 className="payment__title">Shopping Bag</h1>

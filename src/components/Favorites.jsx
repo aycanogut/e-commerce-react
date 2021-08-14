@@ -8,6 +8,7 @@ import {
 import { addToCartAction } from "../redux/actions/cartActions";
 import toast, { Toaster } from "react-hot-toast";
 import Card from "./Card";
+import Title from "./Title";
 
 const Favorites = () => {
   const dispatch = useDispatch();
@@ -24,6 +25,7 @@ const Favorites = () => {
   return (
     <Layout>
       <Toaster position="bottom-right" />
+      <Title title="Favorites" />
       <main>
         <section className="favorites">
           <h1 className="favorites__title">Favorites</h1>

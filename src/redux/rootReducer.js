@@ -12,15 +12,11 @@ const persistConfig = {
   whitelist: ["cart"],
 };
 
-const favoritesPersistConfig = {
-  key: "favorites",
-  storage,
-  whitelist: ["favorites"],
-};
+
 
 const rootReducer = combineReducers({
   cart: cartReducer,
-  favorites: persistReducer(favoritesPersistConfig, favoriteReducer),
+  favorites:  favoriteReducer,
   auth: authReducer,
   product: productReducer,
 });

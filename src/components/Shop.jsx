@@ -9,6 +9,7 @@ import {
 } from "../redux/actions/favoriteActions";
 import toast, { Toaster } from "react-hot-toast";
 import Card from "./Card";
+import Title from "./Title";
 
 const Shop = () => {
   const dispatch = useDispatch();
@@ -40,6 +41,7 @@ const Shop = () => {
   };
   return (
     <Layout>
+      <Title title="Home" />
       <Toaster position="bottom-right" />
       <main>
         <section className="shop">

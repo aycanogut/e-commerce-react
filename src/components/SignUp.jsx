@@ -5,6 +5,7 @@ import * as Yup from "yup";
 import Layout from "./Layout";
 import { registerAction } from "../redux/actions/authActions";
 import { useDispatch } from "react-redux";
+import Title from "./Title";
 
 const SignUp = () => {
   const validate = Yup.object({
@@ -25,6 +26,7 @@ const SignUp = () => {
 
   return (
     <Layout>
+     <Title title="Signup"/>
       <Formik
         initialValues={{
           name: "",
