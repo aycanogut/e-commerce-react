@@ -21,7 +21,7 @@ function App() {
           <Route path="/footer" component={Footer} />
           <Route path="/login" component={Login} />
           <Route path="/signup" component={SignUp} />
-          <Route path="/error" component={Error} />
+          <Route path="*" component={Error} />
         </Switch>
       </Suspense>
     </div>
