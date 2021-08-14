@@ -81,6 +81,16 @@
     @include box-shadow(0px 5px 15px -3px rgba(0, 0, 0, 0.35));
     padding: 3rem;
 
+    // small breakpoint
+    @include mq(small) {
+      padding: 1.4rem;
+    }
+
+    // medium breakpoint
+    @include mq(medium) {
+      padding: 1.8rem;
+    }
+
     &__price {
       display: flex;
       justify-content: space-between;
