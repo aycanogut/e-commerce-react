@@ -2,6 +2,10 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import IconBasket from "../assets/icons/basket.svg";
 import IconLike from "../assets/icons/like.svg";
+import IconRemove from "../assets/icons/basket-remove.svg";
+import IconDislike from "../assets/icons/dislike.svg";
+
+
 import {
   addToCartAction,
   totalPriceAction,
