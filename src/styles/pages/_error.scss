@@ -2,94 +2,45 @@
 
 @use '../abstracts/' as *;
 
-#notfound {
-  position: relative;
+.text-wrapper {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-#notfound .notfound {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-.notfound {
-  max-width: 520px;
-  width: 100%;
-  line-height: 1.4;
-  text-align: center;
-}
-
-.notfound .notfound-404 {
-  position: relative;
-  height: 240px;
-}
-
-.notfound .notfound-404 h1 {
-  font-family: "Montserrat", sans-serif;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  font-size: 252px;
-  font-weight: 900;
-  margin: 0px;
-  color: #262626;
-  text-transform: uppercase;
-  letter-spacing: -40px;
-  margin-left: -20px;
-}
-
-.notfound .notfound-404 h1 > span {
-  text-shadow: -8px 0px 0px #fff;
-}
-
-.notfound .notfound-404 h3 {
-  font-family: "Cabin", sans-serif;
-  position: relative;
-  font-size: 16px;
+.title {
+  font-size: 6em;
   font-weight: 700;
-  text-transform: uppercase;
-  color: #262626;
-  margin: 0px;
-  letter-spacing: 3px;
-  padding-left: 6px;
+  color: $color-dark-gray;
 }
 
-.notfound h2 {
-  font-family: "Cabin", sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-  text-transform: uppercase;
-  color: #000;
-  margin-top: 0px;
-  margin-bottom: 25px;
+.subtitle {
+  font-size: 40px;
+  font-weight: 700;
+  padding: 2rem 0;
+
+  color: $color-dark-gray;
 }
 
-@media only screen and (max-width: 767px) {
-  .notfound .notfound-404 {
-    height: 200px;
-  }
-  .notfound .notfound-404 h1 {
-    font-size: 200px;
-  }
-}
+.buttons {
+  margin: 30px;
 
-@media only screen and (max-width: 480px) {
-  .notfound .notfound-404 {
-    height: 162px;
-  }
-  .notfound .notfound-404 h1 {
-    font-size: 162px;
-    height: 150px;
-    line-height: 162px;
-  }
-  .notfound h2 {
-    font-size: 16px;
+  a.button {
+    font-weight: 700;
+    border: 2px solid $color-dark-gray;
+    text-decoration: none;
+    padding: 15px;
+    text-transform: uppercase;
+    color: $color-dark-gray;
+    border-radius: 26px;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background-color: $color-dark-gray;
+      color: white;
+      transition: all 0.2s ease-in-out;
+    }
   }
 }
