@@ -51,7 +51,7 @@ const Navbar = () => {
           <Link to="/payment">payment</Link>
         </li>
         {user ? (
-          <li onClick={logout} className="nav__list--hidden-item">
+          <li onClick={logout} className="nav__list--hidden-item nav__list--hidden-item--logout">
             logout
           </li>
         ) : (
