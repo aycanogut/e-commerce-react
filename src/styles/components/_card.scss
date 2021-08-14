@@ -40,9 +40,14 @@
       cursor: pointer;
 
       &--like {
-        max-width: 32px;
-        max-height: 32px;
+        max-width: 42px;
+        max-height: 42px;
         margin: 0 0 0 1rem;
+      }
+
+      &--remove {
+        max-width: 42px;
+        max-height: 42px;
       }
     }
 
