@@ -1,20 +1,19 @@
 import Title from "./Title";
 
-export const Error = () => {
+const Error = () => {
   return (
-    <div id="notfound">
-      <Title title="404 Not found" />
-      <div class="notfound">
-        <div class="notfound-404">
-          <h3>Oops! Page not found</h3>
-          <h1>
-            <span>4</span>
-            <span>0</span>
-            <span>4</span>
-          </h1>
-        </div>
-        <h2>we are sorry, but the page you requested was not found</h2>
+    <div class="text-wrapper">
+      <div class="title" data-content="404">
+        404
+      </div>
+      <div class="subtitle">
+        Oops, the page you're looking for doesn't exist.
+      </div>
+      <div class="buttons">
+        <a class="button" href="/">Go to homepage</a>
       </div>
     </div>
   );
 };
+
+export default Error;
