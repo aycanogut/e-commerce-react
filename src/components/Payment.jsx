@@ -47,7 +47,7 @@ const Payment = () => {
                     <div className="card__bottom">
                       <img
                         onClick={() => removeFromCart(cartItem)}
-                        className="card__bottom__icon"
+                        className="card__bottom__icon card__bottom__icon--remove"
                         src={IconRemove}
                         alt=""
                       />
