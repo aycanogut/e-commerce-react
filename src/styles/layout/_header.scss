@@ -59,11 +59,6 @@
       @include mq(large) {
         margin: 8rem 0 0 4rem;
       }
-
-      // xx-large breakpoint
-      @include mq(xx-large) {
-        margin: 3.5rem 0 0 5rem;
-      }
     }
 
     // small breakpoint
@@ -79,6 +74,16 @@
     // large breakpoint
     @include mq(large) {
       margin: 20rem 100rem 0 5rem;
+    }
+
+    // x-large breakpoint
+    @include mq(x-large) {
+      margin: 20rem 140rem 0 5rem;
+    }
+
+    // xx-large breakpoint
+    @include mq(xx-large) {
+      margin: 20rem 300rem 0 5rem;
     }
   }
 
