@@ -6,6 +6,7 @@ import {
   addToCartAction,
   totalPriceAction,
 } from "../redux/actions/cartActions";
+import Card from "./Card";
 import Checkout from "./Checkout";
 import Layout from "./Layout";
 import Title from "./Title";
@@ -32,35 +33,7 @@ const Payment = () => {
               <h2 className="payment__title">Added Items</h2>
               <div className="payment__products__container">
                 {cart.map((cartItem) => (
-                  <article
-                    className="card card--shopping-bag"
-                    key={cartItem.id}
-                  >
-                    <header>
-                      <img
-                        className="card__image"
-                        src={cartItem.imageUrl}
-                        alt={cartItem.name}
-                      />
-                      <h3 className="card__title">{cartItem.name}</h3>
-                    </header>
-                    <div className="card__bottom">
-                      <img
-                        onClick={() => addToCart(cartItem)}
-                        className="card__bottom__icon"
-                        src={IconBasket}
-                        alt=""
-                      />
-                      <img
-                        className="card__bottom__icon--like"
-                        src={IconLike}
-                        alt=""
-                      />
-                      <span className="card__bottom__price">
-                        ${cartItem.price}
-                      </span>
-                    </div>
-                  </article>
+                  <Card product={cartItem} key={cartItem.id} />
                 ))}
               </div>
             </section>
