@@ -21,6 +21,7 @@
   }
 
   &__container {
+    max-width: 250rem;
     @include make-container(2em);
     display: flex;
     flex-direction: column;
