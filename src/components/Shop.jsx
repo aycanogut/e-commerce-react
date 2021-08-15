@@ -19,7 +19,7 @@ const Shop = () => {
 
   useEffect(() => {
     getProducts();
-  }, [products]);
+  }, []);
 
   const addToCart = (product) => {
     dispatch(addToCartAction(product));
