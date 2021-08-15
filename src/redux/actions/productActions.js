@@ -3,8 +3,11 @@ import { db } from "../../firebase/firebase";
 
 export const getProductsAction = () => {
   return async (dispatch) => {
-    const response = await db.collection("products").get();
-    const data = response.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+    const response = await fetch(
+      "https://60f359986d44f3001778892e.mockapi.io/api/products"
+    );
+    const data = await response.json();
+    console.log(data);
     dispatch({ type: actionTypes.GET_PRODUCTS, payload: data });
   };
 };

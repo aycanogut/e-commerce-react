@@ -9,7 +9,7 @@ const Card = ({ product, addToCart, toggleFavorites }) => {
       <header>
         <img
           className="card__image"
-          src={product.imageUrl}
+          src={product.imageURL}
           alt={product.name}
         />
         <h3 className="card__title">{product.name}</h3>
