@@ -8,11 +8,6 @@ export default function productReducer(state = initialValues, action) {
         ...state,
         products: action.payload,
       };
-    case actionTypes.GET_PRODUCT_DETAIL:
-      return {
-        ...state,
-        product: action.payload,
-      };
     default:
       return state;
   }

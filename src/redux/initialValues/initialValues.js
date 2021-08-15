@@ -3,7 +3,6 @@ export const initialValues = {
   favorites: [],
   user: {},
   products: [],
-  product: {},
   totalPrice: null,
   isFavorite: false,
 };

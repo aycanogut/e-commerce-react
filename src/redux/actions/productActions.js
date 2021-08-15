@@ -11,11 +11,3 @@ export const getProductsAction = () => {
     dispatch({ type: actionTypes.GET_PRODUCTS, payload: data });
   };
 };
-
-export const getProductDetailAction = (id) => {
-  return async (dispatch) => {
-    const response = await db.collection("products").doc(id).get();
-    const data = response.data();
-    dispatch({ type: actionTypes.GET_PRODUCT_DETAIL, payload: data });
-  };
-};
