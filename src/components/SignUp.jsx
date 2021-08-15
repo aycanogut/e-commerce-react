@@ -6,6 +6,7 @@ import Layout from "./Layout";
 import { registerAction } from "../redux/actions/authActions";
 import { useDispatch } from "react-redux";
 import Title from "./Title";
+import { useHistory } from "react-router";
 
 const SignUp = () => {
   const validate = Yup.object({
@@ -21,12 +22,16 @@ const SignUp = () => {
       .required("Confirm password is required"),
   });
   const dispatch = useDispatch();
-  const register = (name, email, password) =>
+  const history = useHistory();
+
+  const register = (name, email, password) => {
     dispatch(registerAction(name, email, password));
+    history.push("/login");
+  };
 
   return (
     <Layout>
-     <Title title="Signup"/>
+      <Title title="Signup" />
       <Formik
         initialValues={{
           name: "",
