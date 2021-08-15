@@ -177,3 +177,9 @@ p {
   font-size: 1.4rem;
   font-weight: map-get($font-weight, semi-bold);
 }
+
+// quantity
+.quantity {
+  font-family: $font-family-rubik;
+  font-size: 2.4em;
+}
