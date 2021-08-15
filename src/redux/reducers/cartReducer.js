@@ -1,6 +1,6 @@
 import * as actionTypes from "../actionTypes";
 import { initialValues } from "../initialValues/initialValues";
-import { addToCart } from "./cart.util";
+import { addToCart, removeItemFromCart } from "./cart.util";
 
 export default function cartReducer(state = initialValues, action) {
   switch (action.type) {
@@ -10,13 +10,9 @@ export default function cartReducer(state = initialValues, action) {
         cart: addToCart(state.cart, action.payload),
       };
     case actionTypes.REMOVE_FROM_CART:
-      const removeCartItem = state.cart.filter(
-        (cartItem) => cartItem.id !== action.payload.id
-      );
-
       return {
         ...state,
-        cart: removeCartItem,
+        cart: removeItemFromCart(state.cart, action.payload),
       };
     case actionTypes.TOTAL_PRICE:
       return {
