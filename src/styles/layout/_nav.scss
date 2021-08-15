@@ -93,7 +93,13 @@
 
     // colors
     &-item:nth-child(-n + 3) a {
+      @include transition(0.4s ease-in);
       color: $color-blue;
+
+      &:hover {
+        @include transition(0.4s ease-out);
+        color: $color-dark-gray;
+      }
     }
 
     &-item a {
