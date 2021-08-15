@@ -9,6 +9,7 @@ import Card from "./Card";
 import Checkout from "./Checkout";
 import Layout from "./Layout";
 import Title from "./Title";
+import Quantity from "./Quantity";
 import IconRemove from "../assets/icons/basket-remove.svg";
 import IconLike from "../assets/icons/like.svg";
 import IconDislike from "../assets/icons/dislike.svg";
@@ -45,7 +46,8 @@ const Payment = () => {
                       <h3 className="card__title">{cartItem.name}</h3>
                     </header>
                     <div className="card__bottom">
-                      <img
+                      <Quantity quantity={cartItem.quantity}/>
+                      {/* <img
                         onClick={() => removeFromCart(cartItem)}
                         className="card__bottom__icon card__bottom__icon--remove"
                         src={IconRemove}
@@ -55,7 +57,7 @@ const Payment = () => {
                         className="card__bottom__icon--like"
                         src={cartItem.isFavorite ? IconDislike : IconLike}
                         alt=""
-                      />
+                      /> */}
                       <span className="card__bottom__price">
                         ${cartItem.price}
                       </span>
