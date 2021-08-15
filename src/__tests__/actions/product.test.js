@@ -6,6 +6,7 @@ const store = mockStore();
 
 describe("product actions", () => {
   it("should return products from api", () => {
+    expect.assertions(2);
     return store.dispatch(getProductsAction()).then(() => {
       const action = store.getActions();
 
