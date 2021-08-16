@@ -21,6 +21,10 @@ const Navbar = () => {
     getCurrentUser();
   }, [user]);
 
+  const style = {
+    position: "relative",
+    zIndex: 10,
+  };
   return (
     <nav className="nav">
       <Link to="/">
@@ -38,28 +42,31 @@ const Navbar = () => {
             <img src={IconBasket} alt="" />
           </Link>
         </li>
-
       </ul>
       <ul className={`nav__list--hidden ${isOpen ? "nav__show" : "nav__hide"}`}>
-        <li className="nav__list--hidden-item">
+        <li style={style} className="nav__list--hidden-item">
           <Link to="/">shop</Link>
         </li>
-        <li className="nav__list--hidden-item">
+        <li style={style} className="nav__list--hidden-item">
           <Link to="/favorites">favorites</Link>
         </li>
-        <li className="nav__list--hidden-item">
+        <li style={style} className="nav__list--hidden-item">
           <Link to="/payment">payment</Link>
         </li>
         {user ? (
-          <li onClick={logout} className="nav__list--hidden-item nav__list--hidden-item--logout">
+          <li
+            style={style}
+            onClick={logout}
+            className="nav__list--hidden-item nav__list--hidden-item--logout"
+          >
             logout
           </li>
         ) : (
           <>
-            <li className="nav__list--hidden-item">
+            <li style={style} className="nav__list--hidden-item">
               <Link to="/login">login</Link>
             </li>
-            <li className="nav__list--hidden-item">
+            <li style={style} className="nav__list--hidden-item">
               <Link to="/signup">sign up</Link>
             </li>
           </>
