@@ -28,7 +28,7 @@ const Quantity = ({ quantity, cartItem }) => {
       >
         <img src={IconPlus} alt="icon plus" />
       </button>
-      <input type="text" name="name" value={quantity} />
+      <input type="text" name="name" value={quantity} readOnly />
       <button
         onClick={() => removeFromCart(cartItem)}
         className="quantity__btn"
