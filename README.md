@@ -4,15 +4,16 @@
 
 ![](https://media.discordapp.net/attachments/862931841781334046/876543803014643722/Screenshot_2021-08-15_at_22-10-27_More_Home.png?width=1290&height=573)
 
-Project created with React for e-commerce shopping. Products can be added or removed from the shopping basket or favorites section. Firebase used for user authentication. Stripe used for payment method. Formik and yup used for form validation.
+e-commerce shopping project created with React. Card details is pulled from mockAPI and the products can be added or removed from the shopping basket or favorites section. 
+Firebase used for user authentications. Stripe used for payment method. Formik and yup used for form validations.
 
-## Install
+## Installing
 
 ```
 npm install
 ```
 
-## Start project
+## Starting project
 
 ```
 npm start
@@ -24,6 +25,7 @@ npm start
 - [Redux](https://react-redux.js.org/)
 - [React Router (Code Splitting)](https://reactrouter.com/)
 - [Firebase](https://firebase.google.com/)
+- [mockAPI](https://mockapi.io/)
 - [Stripe](https://stripe.com/)
 - [Formik](https://formik.org/)
 - [yup](https://github.com/jquense/yup)
@@ -34,6 +36,12 @@ npm start
 
 - [Github](https://github.com/aycanogut/e-commerce-react)
 - [Deployment](https://brave-villani-93280e.netlify.app/)
+
+### Authors
+
+- [Aycan Öğüt]
+- [Melisa Demirparmak]
+- [Nihat Tuzlacı]
 
 ### License
 
