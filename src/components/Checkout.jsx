@@ -8,8 +8,7 @@ import {
 } from "../redux/actions/cartActions";
 
 const Checkout = () => {
-  const publishableKey =
-    "pk_test_51IAyzOGfCP0Fsyu4L2CRNv4iBDrkk41TgXWHVRhViEanoWjEKuwO9KgiR03aPrGC5VfgT5COjUBSZ46t00AY9FWz00QAq3etm6";
+  const publishableKey = process.env.REACT_APP_PAYMENT_KEY;
   const dispatch = useDispatch();
   const totalPriceOfCart = () => dispatch(totalPriceAction());
   const { totalPrice } = useSelector((state) => state.cart);
