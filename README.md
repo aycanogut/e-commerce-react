@@ -5,7 +5,7 @@
 ![](https://media.discordapp.net/attachments/862931841781334046/876543803014643722/Screenshot_2021-08-15_at_22-10-27_More_Home.png?width=1290&height=573)
 
 e-commerce shopping project created with React. Card details is pulled from mockAPI and the products can be added or removed from the shopping basket or favorites section. 
-Firebase used for user authentications. Stripe used for payment method. Formik and yup used for form validations.
+Build with Firebase for user authentications, Striped for payment method and Formik & yup for form validations.
 
 ## Installing
 
