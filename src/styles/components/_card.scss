@@ -58,6 +58,20 @@
       color: $color-yellow;
     }
 
+    // small breakpoint
+    @include mq(small) {
+      padding: 0 1rem;
+    }
+
+    @media (min-width: 538px) and (max-width: 584px) {
+      padding: 0;
+    }
+
+    // medium breakpoint
+    @include mq(medium) {
+      padding: 0 1.2rem 0 1.6rem;
+    }
+
     // large breakpoint
     @include mq(large) {
       padding: 2rem;
@@ -86,6 +100,7 @@
 
   &--payment {
     @include box-shadow(0px 5px 15px -3px rgba(0, 0, 0, 0.35));
+    min-width: 20rem;
     padding: 3rem;
 
     // small breakpoint
@@ -96,6 +111,11 @@
     // medium breakpoint
     @include mq(medium) {
       padding: 1.8rem;
+    }
+
+    // large breakpoint
+    @include mq(large) {
+      padding: 3rem 2rem;
     }
 
     &__price {
@@ -110,6 +130,8 @@
     }
 
     &__money {
+      white-space: nowrap;
+      margin: 0 1rem;
       color: $color-red;
     }
 
