@@ -32,7 +32,7 @@ export const registerAction = (name, email, password) => {
 };
 
 export const currentUserAction = () => {
-  return (dispatch) => {
+  return async (dispatch) => {
     auth.onAuthStateChanged((user) =>
       dispatch({ type: actionTypes.CURRENT_USER, payload: user })
     );
