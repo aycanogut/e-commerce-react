@@ -100,6 +100,24 @@ p {
   }
 }
 
+.payment {
+  h2 {
+    font-size: 3rem;
+  }
+
+  // medium breakpoint
+  @include mq(medium) {
+    h2 {
+      font-size: 3.2rem;
+    }
+
+    // large breakpoint
+    @include mq(large) {
+      font-size: 3.4rem;
+    }
+  }
+}
+
 // form
 .form {
   font-family: $font-family-rubik;
@@ -181,5 +199,5 @@ p {
 // quantity
 .quantity {
   font-family: $font-family-rubik;
-  font-size: 2.4em;
+  font-size: 2.4rem;
 }
