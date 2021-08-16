@@ -6,7 +6,8 @@
 
 This is a React-based e-commerce shopping project.
 MockAPI is used to get card information, and goods may be added to or deleted from the shopping cart or favorites area.
-User authentication is handled by Firebase, payment is handled by Stripe, and form validation is handled by Formik and yup. 
+User authentication is handled by Firebase, payment is handled by Stripe, and form validation is handled by Formik and yup.
+
 
 ## Installing
 
@@ -27,6 +28,7 @@ npm start
 - [React Router (Code Splitting)](https://reactrouter.com/)
 - [Firebase](https://firebase.google.com/)
 - [mockAPI](https://mockapi.io/)
+- [jestjs](https://jestjs.io/)
 - [Stripe](https://stripe.com/)
 - [Formik](https://formik.org/)
 - [yup](https://github.com/jquense/yup)
