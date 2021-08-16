@@ -18,8 +18,8 @@
     @include transition(0.25s ease-in);
     width: 30px;
     height: 30px;
+    margin: 0 0.5rem;
     background-color: #e1e8ee;
-
     border-radius: 6px;
     border: none;
     cursor: pointer;
@@ -27,6 +27,11 @@
     &:hover {
       @include transition(0.25s ease-in);
       background-color: rgba($color-dark-gray, 0.2);
+    }
+
+    // medium breakpoint
+    @include mq(medium) {
+      margin: 0 1rem;
     }
   }
 
