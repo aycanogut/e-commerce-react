@@ -40,9 +40,9 @@ npm start
 
 ### Authors
 
-- [Aycan Öğüt]
-- [Melisa Demirparmak]
-- [Nihat Tuzlacı]
+- [Aycan Öğüt]()
+- [Melisa Demirparmak](https://github.com/melisademirparmak)
+- [Nihat Tuzlacı](https://github.com/senixus)
 
 ### License
 
