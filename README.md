@@ -23,7 +23,7 @@ npm start
 ## Links
 
 - [Github](https://github.com/aycanogut/e-commerce-react)
-- [Deployment](https://brave-villani-93280e.netlify.app/)
+- [Deployment](https://more-shopping.netlify.app/)
 
 ## Built with
 
