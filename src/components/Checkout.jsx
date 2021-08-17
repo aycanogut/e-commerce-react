@@ -27,10 +27,11 @@ const Checkout = () => {
 
   return (
     <div>
-      <Toaster position="bottom-right" />
+      <Toaster position="bottom-right" toastOptions={{ className: "toast" }} />
+
       <StripeCheckout
         label="Pay Now"
-        name="E-commerce"
+        name="More Shopping"
         billingAddress
         shippingAddress
         description={`Your total is $ ${totalPrice}`}

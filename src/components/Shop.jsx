@@ -42,7 +42,7 @@ const Shop = () => {
   return (
     <Layout>
       <Title title="Home" />
-      <Toaster position="bottom-right" />
+      <Toaster position="bottom-right" toastOptions={{ className: "toast" }} />
       <main>
         <section className="shop">
           <h3 className="shop__title">shop</h3>

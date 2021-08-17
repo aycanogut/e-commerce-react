@@ -21,7 +21,7 @@ const Favorites = () => {
   };
   return (
     <Layout>
-      <Toaster position="bottom-right" />
+      <Toaster position="bottom-right" toastOptions={{ className: "toast" }} />
       <Title title="Favorites" />
       <main>
         <section className="favorites">
