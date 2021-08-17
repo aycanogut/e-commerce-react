@@ -26,7 +26,9 @@ const Payment = () => {
           <h1 className="payment__title">Shopping Bag</h1>
           <div className="payment__container">
             <section className="payment__products">
-              <h2 className="payment__title">{cart.length >= 1 ? `Added Items` : `Empty Bag`}</h2>
+              <h2 className="payment__title">
+                {cart.length >= 1 ? `Added Items` : `Empty Bag`}
+              </h2>
               <div className="payment__products__container">
                 {cart.map((cartItem) => (
                   <article className="card card--shop" key={cartItem.id}>
