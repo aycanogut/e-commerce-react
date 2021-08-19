@@ -8,6 +8,9 @@ This is a React-based e-commerce shopping project.
 MockAPI is used to get card information, and goods may be added to or deleted from the shopping cart or favorites area.
 User authentication is handled by Firebase, payment is handled by Stripe, and form validation is handled by Formik and yup.
 
+## Component Diagram
+
+![](./src/assets/diagram/diagram.png)
 
 ## Installation
 
